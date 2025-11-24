@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "TUTORÍAS-DE-CLASES/1.0.0": {
+        "runtime": {
+          "TUTORÍAS-DE-CLASES.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TUTORÍAS-DE-CLASES/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

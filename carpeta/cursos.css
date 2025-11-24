@@ -1,0 +1,163 @@
+/* Reset y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Barra superior negra */
+.top-bar span {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 13px;
+}
+
+/* Menú de navegación */
+.navbar-brand img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #333;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Bienvenida */
+.avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Carrusel/Banner */
+.carousel-container {
+    position: relative;
+    padding: 30px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 250px;
+}
+
+.carousel-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 45%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+    transform: rotate(-2deg);
+}
+
+.carousel-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.carousel-text span {
+    color: #F5BE6B;
+}
+
+.carousel-text p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.carousel-image {
+    max-width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+/* Filtros y Búsqueda */
+.filter-section {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.rating-stars i {
+    font-size: 16px;
+}
+
+.progress {
+    height: 5px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.progress-bar {
+    background-color: #F5BE6B;
+    border-radius: 3px;
+}
+
+/* Listado de Cursos */
+.course-item {
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.course-item-info {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.course-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Icono WhatsApp fijo */
+.whatsapp-icon {
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.whatsapp-icon i {
+    width: 24px;
+    height: 24px;
+}

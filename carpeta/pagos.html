@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EduMentor - Pagar Curso</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles-pagos.css" />
+</head>
+<body>
+
+    <!-- Barra superior negra -->
+    <div class="top-bar bg-dark text-white py-2 text-center">
+        <span>Contact us: 📞 +593 98 541 2458</span>
+        <span>✉️ capacitacion@tutorias.ec</span>
+        <span>🎓 Mas de 15.000 Profesionales Certificados</span>
+    </div>
+
+    <!-- Barra de navegación amarilla -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="inicio.html">
+                <img src="img/logo.png" alt="Logo EduMentor" width="64" height="46" class="me-2">
+                EduMentor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Docentes</a>
+                    </li>
+                    <!-- Menú desplegable "Perfil" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Perfil
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Mis cursos</a></li>
+                            <li><a class="dropdown-item" href="#">Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container my-4">
+
+        <div class="row">
+            <!-- Columna izquierda: Formulario de pago -->
+            <div class="col-md-6">
+                <h2 class="mb-4">Pagar</h2>
+
+                <!-- Dirección de facturación -->
+                <div class="mb-4">
+                    <h5>Dirección de facturación</h5>
+                    <p class="text-muted">Guayaquil/Ecuador</p>
+                </div>
+
+                <!-- País -->
+                <div class="mb-4">
+                    <h5>País</h5>
+                    <select class="form-select" id="countrySelect">
+                        <option value="ecuador" selected>Ecuador</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="peru">Perú</option>
+                        <option value="mexico">México</option>
+                    </select>
+                </div>
+
+                <!-- Métodos de Pago -->
+                <div class="mb-4">
+                    <h5>Métodos de Pago</h5>
+                    <div class="payment-methods p-3 border rounded">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal1" value="paypal1" checked>
+                            <label class="form-check-label d-flex justify-content-between" for="paypal1">
+                                <span>PAYPAL</span>
+                                <i class="fab fa-paypal text-primary"></i>
+                            </label>
+                            <div class="ms-4 mt-2 small">
+                                <strong>Nombre de la cuenta:</strong> Josue Negrete<br>
+                                <strong>Número de la cuenta:</strong> 877245894357
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal2" value="paypal2">
+                            <label class="form-check-label d-flex justify-content-between" for="paypal2">
+                                <span>PAYPAL de Danilo Negrete</span>
+                                <i class="fab fa-paypal text-primary"></i>
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="tarjetas" value="tarjetas">
+                            <label class="form-check-label d-flex justify-content-between" for="tarjetas">
+                                <span>Tarjetas</span>
+                                <div>
+                                    <i class="fab fa-cc-visa text-primary me-2"></i>
+                                    <i class="fab fa-cc-mastercard text-primary me-2"></i>
+                                    <i class="fab fa-cc-amex text-primary"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso adquirido -->
+                <div class="mt-4">
+                    <h5>Curso adquirido</h5>
+                    <div class="d-flex align-items-start mt-3">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max" alt="Programación orientada a objetos" class="me-3" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px;">
+                        <div>
+                            <h6>Curso presencial de Programación Orientada a Objetos (POO)</h6>
+                            <p class="small text-muted mb-0">Curso presencial para aprender los fundamentos y técnicas de programación orientada a objetos. Incluye clases prácticas para desarrollar habilidades en diseño y codificación de software eficiente y modular.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Resumen del pedido -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="mb-4">Resumen del pedido</h4>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Precio Original</span>
+                            <span>59.99 US$</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4">
+                            <span>Precio Original</span>
+                            <span>49.00 US$</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <strong>Total (1 Curso)</strong>
+                            <strong>10.99 US$</strong>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mb-3">Pagar 10.99 US$ por Paypal</button>
+
+                        <p class="small text-center">
+                            Garantía de reembolso durante 15 días! Esperamos que sigas comprando con nosotros por favor antes de su compra <a href="#" class="text-primary">Leer términos y condiciones</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Icono WhatsApp fijo -->
+    <a href="#" class="whatsapp-icon position-fixed bottom-0 end-0 m-3 d-flex align-items-center justify-content-center rounded-circle bg-success text-white shadow">
+        <i class="fab fa-whatsapp fa-lg"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script-pagos.js"></script>
+</body>
+</html>
