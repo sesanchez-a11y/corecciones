@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - EduMentor</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="../archivoscss/perfil.css">
+</head>
+<body>
+
+  <!-- Barra superior negra -->
+  <div class="top-bar bg-dark text-white py-2 text-center">
+    <span>Contact us: 📞 +593 98 541 2458</span>
+    <span>✉️ capacitacion@tutorias.ec</span>
+    <span>🎓 Mas de 15.000 Profesionales Certificados</span>
+  </div>
+
+  <!-- Barra de navegación amarilla -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning px-4">
+    <div class="container-fluid">
+      <!-- Botón hamburguesa personalizado -->
+      <button class="navbar-toggler-custom me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="../img/logo.png" alt="Logo EduMentor" width="64" height="46" class="me-2">
+        EduMentor
+      </a>
+
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="inicio.html">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Panel lateral (offcanvas) amarillo -->
+  <div class="offcanvas offcanvas-start bg-yellow shadow" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel" style="width: 280px; border-radius: 0 15px 15px 0;">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title" id="sidebarOffcanvasLabel">Menú</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-3">
+
+      <!-- Barra amarilla debajo del título (dentro del panel) -->
+      <div class="sidebar-header-bar mb-3"></div>
+
+      <!-- Íconos de correo y notificación -->
+      <div class="d-flex justify-content-between mb-3">
+        <a href="#" class="text-dark"><i class="far fa-envelope fa-2x"></i></a>
+        <a href="#" class="text-dark"><i class="far fa-bell fa-2x"></i></a>
+      </div>
+
+      <!-- Lista de opciones con íconos -->
+      <div class="list-group list-group-flush mb-3">
+        <a href="#" class="list-group-item list-group-item-action bg-yellow d-flex align-items-center" id="historialBtn">
+          <i class="fas fa-book-open me-3"></i> Historial de compra
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-yellow d-flex align-items-center" id="clasesBtn">
+          <i class="fas fa-chalkboard-teacher me-3"></i> Mis cursos
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-yellow d-flex align-items-center" id="materialesBtn">
+          <i class="fas fa-folder-open me-3"></i> Materiales
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-yellow d-flex align-items-center" id="horariosBtn">
+          <i class="far fa-clock me-3"></i> Horarios
+        </a>
+      </div>
+
+      <!-- Botón de cerrar sesión -->
+      <div class="mt-auto pt-3 border-top">
+        <button id="logoutBtn" class="btn btn-danger w-100">
+          <i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+
+      <!-- Columna 2: Contenido principal (Historial de compra + Filtros) -->
+      <div class="col-md-9 main-content">
+        <!-- Tabla 1x2: Info del usuario y Historial de compra -->
+        <div class="table-responsive">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <!-- Columna 1: Información del usuario -->
+                <td class="align-top" style="width: 30%;">
+                  <div class="card p-3">
+                    <div class="text-center mb-3">
+                      <img id="userAvatarTable" src="../img/default-avatar.png" alt="Avatar" class="avatar">
+                    </div>
+                    <h5 id="userNameTable" class="card-title">Cargando...</h5>
+                    <p id="userEmailTable" class="card-text text-muted">Cargando...</p>
+                    <p id="userRolTable" class="card-text text-muted">Cargando...</p>
+                    <p id="userPhoneTable" class="card-text text-muted">Teléfono: Cargando...</p>
+                  </div>
+                </td>
+
+                <!-- Columna 2: Historial de compra -->
+                <td class="align-top" style="width: 150%;">
+                  <h2 class="mb-4">Historial de compra</h2>
+
+                  <!-- Filtros -->
+                  <div class="filter-section">
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                      <label class="form-label mb-0">Filtrar por:</label>
+                      <select id="filterCurso" class="form-select form-select-sm" style="width: auto;">
+                        <option value="">Curso</option>
+                        <option value="Desarrollo Web desde Cero">Desarrollo Web desde Cero</option>
+                        <option value="Excel para Principiantes 2025">Excel para Principiantes 2025</option>
+                        <option value="Fotografía Profesional con Smartphone">Fotografía Profesional con Smartphone</option>
+                        <option value="Marketing Digital Completo">Marketing Digital Completo</option>
+                        <option value="Edición de Video con Premiere Pro">Edición de Video con Premiere Pro</option>
+                      </select>
+                      <select id="filterCategoria" class="form-select form-select-sm" style="width: auto;">
+                        <option value="">Categoría</option>
+                        <option value="Programación / Web">Programación / Web</option>
+                        <option value="Productividad / Office">Productividad / Office</option>
+                        <option value="Arte / Fotografía">Arte / Fotografía</option>
+                        <option value="Negocios / Marketing">Negocios / Marketing</option>
+                        <option value="Multimedia / Video">Multimedia / Video</option>
+                      </select>
+                      <input type="date" id="filterFecha" class="form-control form-control-sm" style="width: auto;">
+                      <select id="filterMetodoPago" class="form-select form-select-sm" style="width: auto;">
+                        <option value="">Método de pago</option>
+                        <option value="Tarjeta">Tarjeta</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Apple Pay">Apple Pay</option>
+                        <option value="Google Pay">Google Pay</option>
+                      </select>
+                      <input type="text" id="filterDocente" class="form-control form-control-sm" placeholder="Docente" style="width: auto;">
+                      <input type="text" id="filterBuscar" class="form-control form-control-sm" placeholder="Buscar..." style="width: auto;">
+                      <button id="applyFilters" class="btn btn-sm btn-outline-secondary">Aplicar</button>
+                      <button id="clearFilters" class="btn btn-sm btn-outline-secondary">Limpiar</button>
+                    </div>
+                  </div>
+
+                  <!-- Tabla de historial -->
+                  <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>Curso</th>
+                          <th>Categoría</th>
+                          <th>Fecha de inscripción</th>
+                          <th>Método de pago</th>
+                          <th>Instructor</th>
+                        </tr>
+                      </thead>
+                      <tbody id="historialTableBody">
+                        <!-- Se llena con JS -->
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tu JS personalizado -->
+  <script src="perfil.js"></script>
+</body>
+</html>
